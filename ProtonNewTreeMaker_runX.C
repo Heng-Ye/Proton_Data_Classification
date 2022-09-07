@@ -178,7 +178,7 @@ void ProtonNewTreeMaker_run5387::Loop() {
 
 
 	//Tree Structures --------------------------------------------------------------------------------------------------//
-	TString str_out=Form("/dune/data2/users/hyliao/protonana/v09_39_01/Classification/protons_data_mva2_run%d.root",run);
+	TString str_out=Form("/dune/data2/users/hyliao/protonana/v09_39_01/Classification/protons_data_mva2_run%d.root",5387);
 
 	TFile *hfile =new TFile(str_out.Data(),"RECREATE");
 	TTree *tree = new TTree("tr","signal");
@@ -665,6 +665,10 @@ void ProtonNewTreeMaker_run5387::Loop() {
 
 	//save results -------//
 	tree->Write();
+
+	hfile->Close();
+
+
 
 
 	}
